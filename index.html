@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skullberry Tattoo Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400&family=Open+Sans:wght@300;400;600&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" aria-label="Main">
+    <a href="#about" class="nav__link nav__link--optional">about</a>
+    <a href="#artists" class="nav__link">artists</a>
+    <a href="#services" class="nav__link nav__link--optional">gallery</a>
+  <a href="#top" aria-label="Skullberry home"><img class="logo" src="image/logo.jpg" alt="Skullberry Tattoo Studio"></a>
+    <a href="#news" class="nav__link">events</a>
+    <a href="#contact" class="nav__link nav__link--optional">contact</a>
+    <a href="#contact" class="nav__link">book</a>
+  </nav>
+
+  <main>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero__content container">
+    <p class="hero__logo ">Skullberry<br>Tattoo Studio</p>
+    <h1 class="hero__title">Not just some art<br>It's who I am</h1>
+    <a class="btn" href="#contact">Book now</a>
+  </div>
+</header>
+
+    <!-- SERVICES -->
+    <section class="service" id="services">
+      <div class="service__inner container">
+        <div class="service__pic"><img src="image/tattoo.jpg" alt="Tattoo work by Skullberry artists"></div>
+        <div class="service__text">
+          <h2>Tattoo</h2>
+          <p>Custom designs, fine line, blackwork, traditional, realism and cover-ups. Every piece starts with a conversation, so what ends up on your skin is yours. Replace this text with your own description.</p>
+          <a class="more" href="#artists">read more <span class="more__icon" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="service" id="about">
+      <div class="service__inner container">
+        <div class="service__pic"><img src="image/piercing.jpg" alt="Piercing at Skullberry Tattoo Studio"></div>
+        <div class="service__text">
+          <h2>Piercing</h2>
+          <p>Safe, sterile piercing with implant-grade jewelry. Our piercers will help you pick the placement and style that suits you. Replace this text with your own description.</p>
+          <a class="more" href="#contact">read more <span class="more__icon" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+     <section class="service" id="about">
+      <div class="service__inner container">
+        <div class="service__pic"><img src="image/merch.jpg" alt="Merch at Skullberry Tattoo Studio"></div>
+        <div class="service__text">
+          <h2>Merch</h2>
+          <p>Take a piece of the experience home with our exclusive merchandise collection. We’ve paired a lineup of high-quality, ultra-comfortable clothing that you’ll actually want to wear every day with a curated selection of unique souvenirs designed to perfectly capture your favorite memories. Whether you are hunting for a stylish tee to represent the brand or the perfect little keepsake to gift a friend, our shop has exactly what you need to keep the vibe alive long after you leave.</p>
+          <a class="more" href="#contact">read more <span class="more__icon" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTISTS (filled by script.js) -->
+    <section class="artists" id="artists">
+      <div class="container">
+        <h2>Our Artists</h2>
+        <div class="roster" id="roster" role="tablist" aria-label="Skullberry artists"></div>
+
+        <div class="profile" id="profile" role="tabpanel" aria-live="polite">
+          <div>
+            <h3 class="profile__name" id="artistName"></h3>
+            <p class="profile__role" id="artistRole"></p>
+            <p class="profile__bio" id="artistBio"></p>
+            <ul class="tags" id="artistTags"></ul>
+            <ul class="tags">
+              <li>read bio</li>
+              <li>ink works</li>
+              <li><a href="#contact">schedule</a></li>
+            </ul>
+          </div>
+          <div class="profile__photo"><img id="artistPhoto" src="" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS & EVENTS (filled by script.js) -->
+   <section class="news" id="news">
+      <div class="news__inner container">
+        <div class="news__pic" id="newsPic"></div>
+        <div>
+          <h2>News &amp; Events</h2>
+          <article class="card">
+            <p class="card__tag" id="newsTag"></p>
+            <h3 class="card__title" id="newsTitle"></h3>
+            <p class="card__body" id="newsBody"></p>
+            <p class="card__by"><span class="card__avatar"></span><span id="newsBy"></span></p>
+            <div class="dots" id="newsDots"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form class="form" id="contactForm">
+          <input type="text"  name="name"    placeholder="Full Name"      aria-label="Full name" required>
+          <input type="email" name="email"   placeholder="Email Address"  aria-label="Email address" required>
+          <input type="tel"   name="phone"   placeholder="Contact Number" aria-label="Contact number">
+          <input type="text"  name="subject" placeholder="Subject"        aria-label="Subject">
+          <textarea name="message" placeholder="Write your message here." aria-label="Message" required></textarea>
+          <button class="btn btn--amber form__send" type="submit">Inquire now &rarr;</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__grid container">
+      <div class="seal blackletter">S</div>
+
+      <ul class="footer__list">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+      </ul>
+
+      <ul class="footer__list">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+
+      <div>
+        <p class="footer__heading">Subscribe to our newsletter</p>
+        <form class="newsletter" id="newsletterForm">
+          <input type="email" placeholder="Email Address" aria-label="Newsletter email" required>
+          <button type="submit">OK</button>
+        </form>
+      </div>
+
+      <address class="footer__address">
+       Skullberry Tattoo Studio JBT building by-pass road near the port exit.<br>
+        Dumaguete City, Negros Oriental, Philippines<br>
+        skullberrytattoostudio@gmail.com
+      </address>
+    </div>
+    <p class="footer__copy container">&copy; 2026 Skullberry Tattoo Studio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
